@@ -14,9 +14,8 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
+    <script src="flipcart.js"></script>
+  </head>
 <body class="bgforbody">
     <!--Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg bgfornav">
@@ -34,15 +33,15 @@
         <!-- Login Button-->
             <div class="container1">
                 <div class="dropdown">
-                <button class="login-btn">
+                <button class="login-btn" onclick="toggleDropdown()">
                 <i class="fas fa-user"></i>
                 <span>Login</span>
                 <i id="i1" class="fas fa-chevron-down"></i>
                 </button>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content" id="dropdown-Content">
                         <div class="log1">
                         <h6>New Customer</h6>
-                        <a id="a1" href="">Sign Up</a>
+                        <a id="a1" href="#" onclick="showSignup(event)">Sign Up</a>
                         </div>
                         <hr>
                         <div id="list">
@@ -55,6 +54,29 @@
                         </div>
                     </div>
                 </div>
+                <!-- Signup Popup -->
+                <div id="signupPopup" class="popup">
+                  <div class="popup-content">
+                    <button class="close" onclick="closePopup()">&times;</button>
+                      <!-- Signup form goes here -->
+                      <div class="container9">
+                        <div class="container91">
+                          <h1>Looks like you're new here!</h1>
+                          <h6>Sign up with your mobile number to get started</h6>
+                        </div>
+                        <div class="signup1">
+                      <form action="">
+                      <input type="text" placeholder="Enter your phone number">
+                      <p>By continuing, you agree to 
+                        Flipkart's Terms of Use and Privacy Policy.</p>
+                      <button>Continue</button>
+                      <button>Existing user ? Login</button>
+                    </form>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+                <!-- //signup popup// -->
             <!-- //Login Button//-->
             <button class="cart">
             <i class="fas fa-shopping-cart"></i> 
@@ -75,21 +97,131 @@
     <!--//Top Navigation Bar// -->
 
 <!-- Items Bar -->
-    <div class="container2 container-xxl">
+    <div class="container2 bg-white">
         <div class="container3">
-            <img src="images/electronics.jpg" alt="Your Image" 
-            width="50" height="50">
+            <img src="images/grocery.jpg" alt="Your Image" 
+            width="80" height="80">
             <div class="container4 ">
-            <a href="#" class="downarrow1">Electronics</a>
-            <i class="fas fa-chevron-down"></i>
+            <a href="#" class="downarrow1">Grocery</a>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="images/mobiles.jpg" alt="Your Image" 
+            width="80" height="80">
+            <div class="container4 ">
+            <a href="#" class="downarrow1">Mobiles</a>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="images/fasion.jpg" alt="Your Image" 
+            width="80" height="80">
+            <div class="container4 dropdown1">
+            <a href="#" class="downarrow1">Fasion</a>
+            <i class="fas fa-chevron-down i2"></i>
+            <div class="dropdowncontent1">
+              <div class="list1">
+              <a href="#" id="list2">Items <i class="fas fa-chevron-right i3"></i></a>
+              <a href="#" id="list3">Items <i class="fas fa-chevron-right i3"></i></a>
+              <a href="#" id="list4">Items <i class="fas fa-chevron-right i3"></i></a>
+              <a href="#" id="list5">Items <i class="fas fa-chevron-right i3"></i></a>
+              <a href="#" id="list6">Items <i class="fas fa-chevron-right i3"></i></a>
+              <a href="#" id="list7">Items <i class="fas fa-chevron-right i3"></i></a>
+              <div class="list2">
+                <a href="#">Items1</a>
+                <a href="#">Items1</a>
+                <a href="#">Items1</a>
+                <a href="#">Items1</a>
+                <a href="#">Items1</a>
+                <a href="#">Items1</a>
+              </div>
+              <div class="list3">
+                <a href="#">Items2</a>
+                <a href="#">Items2</a>
+                <a href="#">Items2</a>
+                <a href="#">Items2</a>
+                <a href="#">Items2</a>
+                <a href="#">Items2</a>
+              </div>
+              <div class="list4">
+                <a href="#">Items3</a>
+                <a href="#">Items3</a>
+                <a href="#">Items3</a>
+                <a href="#">Items3</a>
+                <a href="#">Items3</a>
+                <a href="#">Items3</a>
+              </div>
+              <div class="list5">
+                <a href="#">Items4</a>
+                <a href="#">Items4</a>
+                <a href="#">Items4</a>
+                <a href="#">Items4</a>
+                <a href="#">Items4</a>
+                <a href="#">Items4</a>
+              </div>
+              <div class="list6">
+                <a href="#">Items5</a>
+                <a href="#">Items5</a>
+                <a href="#">Items5</a>
+                <a href="#">Items5</a>
+                <a href="#">Items5</a>
+                <a href="#">Items5</a>
+              </div>
+              <div class="list7">
+                <a href="#">Items6</a>
+                <a href="#">Items6</a>
+                <a href="#">Items6</a>
+                <a href="#">Items6</a>
+                <a href="#">Items6</a>
+                <a href="#">Items6</a>
+              </div>
+              </div>
+          </div>
             </div>
         </div>
         <div class="container3">
             <img src="images/electronics.jpg" alt="Your Image" 
-            width="50" height="50">
-            <div class="container4 ">
+            width="80" height="80">
+            <div class="container4 dropdown1">
             <a href="#" class="downarrow1">Electronics</a>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down i2"></i>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="images/furniture.jpg" alt="Your Image" 
+            width="80" height="80">
+            <div class="container4 dropdown1">
+            <a href="#" class="downarrow1">Furniture</a>
+            <i class="fas fa-chevron-down i2"></i>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="images/appliances.jpg" alt="Your Image" 
+            width="80" height="80">
+            <div class="container4 ">
+            <a href="#" class="downarrow1">Appliances</a>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="images/travel.jpg" alt="Your Image" 
+            width="80" height="80">
+            <div class="container4 ">
+            <a href="#" class="downarrow1">Travel</a>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="images/toy.jpg" alt="Your Image" 
+            width="80" height="80">
+            <div class="container4 dropdown1">
+            <a href="#" class="downarrow1">Toys</a>
+            <i class="fas fa-chevron-down i2"></i>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="images/twowheeler.png" alt="Your Image" 
+            width="80" height="80">
+            <div class="container4 dropdown1">
+            <a href="#" class="downarrow1">Two Wheeler</a>
+            <i class="fas fa-chevron-down i2"></i>
             </div>
         </div>
     </div>
@@ -127,11 +259,204 @@
     </div>
     <!-- //Carousel Bar// -->
 
-<!-- Footer Bar -->
-      <nav class="navbar fixed-bottom bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Fixed bottom</a>
+<!-- cards in container -->
+<div class="container8">
+  <div class="slider">
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/keybord.png" alt="...">
         </div>
-      </nav>
+  <div class="cardbody">
+    <p>Keybord</p>
+    <p>from <span>&#8377;500</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/printer.jpg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>Printer</p>
+    <p>from <span>&#8377;10000</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/projector.jpg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>Projector</p>
+    <p>from <span>&#8377;12000</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/tv.jpeg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>TV</p>
+    <p>from <span>&#8377;8000</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/camara.jpg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>Camara</p>
+    <p>from <span>&#8377;25000</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/keybord.png" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>Keybord</p>
+    <p>from <span>&#8377;500</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/printer.jpg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>Printer</p>
+    <p>from <span>&#8377;10000</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/projector.jpg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>Projector</p>
+    <p>from <span>&#8377;12000</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/tv.jpeg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>TV</p>
+    <p>from <span>&#8377;8000</span></p>
+  </div>
+      </div>
+      <div class="card">
+        <div class="cardimage">
+          <img src="images/camara.jpg" alt="...">
+        </div>
+  <div class="cardbody">
+    <p>Camara</p>
+    <p>from <span>&#8377;25000</span></p>
+  </div>
+      </div>
+  </div>
+  <button class="prev-btn" onclick="prevSlide()">&lt;</button>
+  <button class="next-btn" onclick="nextSlide()">&gt;</button>
+</div>
+<!-- //cards in container// -->
+
+<!-- Footer Bar -->
+<footer class="footer">
+    <div class="container51">
+    <div class="container5">
+<div class="cont1">
+  <p class="h7">ABOUT</p>
+  <ul>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">About US</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Flipcart Stores</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Corparate Information</a></li>
+  </ul>
+</div>
+<div class="cont2">
+  <p class="h7">GROUP OF COMPANIES</p>
+  <ul>
+    <li><a href="#">Myntra</a></li>
+    <li><a href="#">Flipcart Wholesale</a></li>
+    <li><a href="#">Cleartrip</a></li>
+    <li><a href="#">Shopsy</a></li>
+  </ul>
+</div>
+<div class="cont3">
+  <p class="h7">HELP</p>
+  <ul>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">About US</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Flipcart Stores</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Corparate Information</a></li>
+  </ul>
+</div>
+<div class="cont4">
+  <p class="h7">CONSUMER POLICY</p>
+  <ul>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">About US</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Flipcart Stores</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Corparate Information</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Corparate Information</a></li>
+  </ul>
+</div>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="container6">
+<div class="cont5">
+  <p class="h7">Mail Us</p>
+  <p>Flipkart Internet Private Limited,
+    Vaishnavi Summit, Ground Floor, 7th Main,
+    80 Feet Road, 3rd Block,
+    Koramangala,
+    Bengaluru - 560034,
+    India.</p>
+  <p class="h7">Social</p>
+  <i class="fab fa-facebook"></i>
+  <i class="fab fa-twitter"></i>
+  <i class="fab fa-youtube"></i>
+</div>
+<div class="cont6">
+  <p class="h7">Registered Office Address</p>
+  Flipkart Internet Private Limited,
+Vaishnavi Summit, Ground Floor, 7th Main,
+80 Feet Road, 3rd Block,
+Koramangala,
+Bengaluru - 560034,
+India.
+CIN: U51109KA2012PTC066107
+Phone: +91 80 46331000
+</div>
+    </div>
+  </div>
+    <div class="container7">
+      <div class="links">
+        <a href="#"><i class="fas fa-shopping-cart"></i> Became a Seller</a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> Advertise</a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> Gift Cards</a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> Help Center</a>
+      </div>
+      <div class="copy">
+        <p>&copy; 2024 Flipkart Clone. All rights reserved.</p>
+      </div>
+      <div class="icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard fa-lg"></i>
+        <i class="fas fa-money-bill-wave"></i>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard fa-lg"></i>
+        <i class="fas fa-money-bill-wave"></i>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard fa-lg"></i>
+        <i class="fas fa-money-bill-wave"></i>
+      </div>
+  </div>
+</footer>
 </body>
 </html>

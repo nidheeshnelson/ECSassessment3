@@ -11,9 +11,12 @@
 .bgfornav{
     background-color: #ffffff;
 }
+nav a img{
+  padding-left: 80px;
+}
 /* search bar */
 .input1{
-background: transparent;
+  background: transparent;
 }
 /* Login Button and cart and seller */
 .container1 {
@@ -55,7 +58,6 @@ background: transparent;
   .login-btn span {
     display: inline-block;
   }
-
   .dropdown-content .log1 #a1{
     display:inline;
     justify-content: space-between;
@@ -104,73 +106,206 @@ background: transparent;
     display: block;
     padding: 10px;
   }
-  
   .dropdown-content #list a {
     display: block;
     padding: 5px 10px;
     text-decoration: none;
     color: #333;
   }
-  
   .dropdown-content #list a i {
     margin-right: 5px;
   }
-  /* Toggler */
-  
-  /* //Toggler// */
-   /* Login Button  dropdown*/
+  /* popup signup */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.container9{
+  padding: 0;
+  display: flex;
+  text-align: center;
+}
+.container91{
+  padding: 60px 30px 10px 30px;
+  background-color: #2674fb;
+}
+.container91 h1 {
+  font-size: 34px; 
+  margin-bottom: 10px; 
+}
+.container91 h6 {
+  font-size: 14px; 
+  color: #ffffff; 
+}
+.signup1{
+  padding: 50px;
+  margin-top: 20px;
+}
+.signup1 input[type="text"] {
+  width: 100%; /* Set the input field width to 100% */
+  padding: 10px; /* Add padding */
+  margin-bottom: 10px; /* Add some space below the input field */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Add border radius */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.signup1 p {
+  font-size: 12px; /* Set the font size */
+  color: #787878; /* Light gray color */
+  margin-bottom: 10px; /* Add some space below the text */
+}
+.signup1 button {
+  width: 100%; /* Set the button width to 100% */
+  padding: 10px; /* Add padding */
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer on hover */
+  margin-bottom: 10px; /* Add some space below the button */
+}
+.signup1 button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+  /* //popup signup// */
+   /* //Login Button  dropdown// */
 /* //Login Button and cart and seller// */
 
   /* Items Bar*/
-  /* .container2{
-    margin-top: 20px;
-    margin-left: 20px !important;
-    margin-right: 20px !important;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-  }
- .container2 .container3 {
-    display: block;
-    position:relative;
-    width: 200px; 
-    height: 150px; 
-  }
-  .container2 .container3 .container4{
-
-    display: inline-block;
-  } */
   .container2 {
-    display: inline-flex;
-    margin: 20px; /* Simplified margin */
+    display: flex;
+    padding: 25px;
+    margin-top: 20px; 
+    margin-right: 20px; 
+    margin-left: 20px; 
     background-color: #ffffff;
   }
-  
   .container3 {
     display: block;
-    align-items: center; /* Align items vertically */
-    width: 200px; 
-    height: 150px; 
+    align-items: center; 
+    padding: 0 47px 0 0;
+    width: auto; 
+    height: auto; 
   }
-  
   .container3 img {
-    align-items: center;
-    margin-right: 10px; /* Add space between image and text */
+    left: auto;
+    right: auto;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
   }
-  
   .container4 {
     display: flex;
-    align-items: center; /* Align items vertically */
+    align-items: center;
+    gap: 10px;
   }
-  
+  .container4 .i2{
+    font-size: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s;
+  }
+  .container4:hover .i2{
+    transform: rotate(180deg);
+  }
   .downarrow1 {
     text-decoration: none; /* Remove underline from the link */
     color: #000; /* Set link color */
   }
-  
-  .fa-chevron-down {
+  .fa-chevron-down, .fa-chevron-right {
     margin-left: 5px; /* Add space between link and icon */
   }
-  
+  .list1 .i3 {
+    font-size: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s;
+  }
+  .list1:hover .i3 {
+    transform: rotate(180deg);
+  }
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdowncontent1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.dropdown1:hover .dropdowncontent1 {
+    display: block;
+}
+.list1 {
+    padding: 10px;
+}
+.list1 a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+.list1 a:hover {
+    background-color: #f1f1f1;
+}
+.list2,
+.list3,
+.list4,
+.list5,
+.list6,
+.list7 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 160px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#list2:hover ~ .list2,
+#list3:hover ~ .list3,
+#list4:hover ~ .list4,
+#list5:hover ~ .list5,
+#list6:hover ~ .list6,
+#list7:hover ~ .list7 {
+    display: block;
+}
+  @media (max-width: 500px){
+    .container2 {
+      display: block;
+    }
+  }
    /* //Items Bar // */
 
    /* Carousel Bar */
@@ -180,14 +315,173 @@ background: transparent;
     width: auto\9;
     max-height: 200px;
   }
-  
   .carousel-inner {
     max-height: 400px; 
   }
-  #carouse, #service{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+  #carouse{
+    margin:20px 20px 20px 20px;
   }
 /* //Carousel Bar// */
  
+/* cards in a container */
+.container8 {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  margin-right: 20px;
+}
+.cardimage {
+  width: 100%;
+  height: 60%;
+}
+.cardimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+.cardimage:hover img {
+  transform: scale(1.1);
+}
+.cardbody {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+.cardbody p {
+  margin: 0;
+}
+.cardbody p span {
+  font-weight: 600;
+}
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+}
+@media (max-width: 600px) {
+  .slider {
+    display: block;
+  }
+  .card {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+}
+/* //cards in a container// */
+
+/* footer */
+.footer {
+  color: white;
+  background-color: #282828; 
+  padding: 10px 0;
+  font-size: small;
+  text-align: center;
+  position:relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container51{
+  padding: 0 0 0 0;
+  margin: 5px 0 0 0;
+  position:relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container5, .container6{
+  flex-grow: 1;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  position:relative;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.vertical-line {
+  border-left: 1px solid black; 
+  margin: 0 20px 0 20px;
+}
+.h7{
+  text-align: center;
+color: #8d8d8d;
+}
+.container5 .cont1 ul li,
+.container5 .cont2 ul li,
+.container5 .cont3 ul li,
+.container5 .cont4 ul li{
+  list-style-type: none;
+}
+.container5 .cont1 ul li a,
+.container5 .cont2 ul li a,
+.container5 .cont3 ul li a,
+.container5 .cont4 ul li a{
+text-decoration: none;
+color: white;
+}
+.cont1,.cont2,.cont3,.cont4{
+  margin: 0;
+  width: 100%; /* Set width to 100% */
+  max-width: 120px; /* Set maximum width */
+  height: auto; /* Allow height to adjust based on content */
+}
+.cont5,.cont6{
+  margin: 20px;
+  width: 100%; /* Set width to 100% */
+  max-width: 200px; /* Set maximum width */
+  height: auto; /* Allow height to adjust based on content */
+}
+@media (min-width: 768px) {
+  .cont1, .cont2, .cont3, .cont4, .cont5, .cont6 {
+    width: 50%; /* Set width to 50% on screens wider than 768px */
+  }
+}
+.container7 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-basis: 100%;
+  margin-top: 10px;
+  border-top: 1px solid black; /* Add a horizontal line */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container7 a{
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+.container7 .links a i{
+  color: yellow;
+  margin: 10px;
+}
+.container7 .icons i{
+  margin: 7px;
+}
+/* //footer// */
